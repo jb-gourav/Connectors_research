@@ -1,4 +1,5 @@
-WSDL URL : http://localhost:8080/ws/users.wsdl
+WSDL URL : http://localhost:8080/ws/users.wsdl.
+
 Run `mvn jaxb2:xjc compile install` if schema models required
 
 In MyClient project 
