@@ -18,7 +18,7 @@ import java.util.Map;
 @Component
 public class UserRepository {
 
-    private static final String PROFILE_PICTURE_PATH = "E:\\jitterbit\\mtom\\";
+    private static final String PROFILE_PICTURE_PATH = "D:\\Connectors_research\\SOAP_research\\soap-mtom-response\\src\\main\\resources\\mtom\\";
     private static final Map<Integer, User> USER_MAP = new HashMap<>();
 
     @PostConstruct
