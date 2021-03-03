@@ -1,4 +1,4 @@
-package com.soap.client;
+package com.soap.ws.parser;
 
 import java.util.ArrayList;
 import java.util.Iterator;

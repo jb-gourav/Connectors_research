@@ -1,4 +1,4 @@
-package com.soap.client;
+package com.soap.ws.client;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,6 +9,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 
+import javax.activation.DataHandler;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -42,7 +43,8 @@ public class TestClient {
          
 		
 		  String xmlInput =
-		  "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:user=\"http://innova.com/spring/boot/soap/mtomresponse/models/user\">\r\n"
+		  "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" "
+		  + "xmlns:user=\"http://demo.com/spring/boot/soap/mtomresponse/models/user\">\r\n"
 		  + "   <soapenv:Header/>\r\n" + "   <soapenv:Body>\r\n" +
 		  "      <user:getUserRequest>\r\n" + "         <user:id>1</user:id>\r\n" +
 		  "      </user:getUserRequest>\r\n" + "   </soapenv:Body>\r\n" +
