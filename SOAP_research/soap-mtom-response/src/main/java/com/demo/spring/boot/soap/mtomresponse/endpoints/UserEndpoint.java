@@ -2,6 +2,8 @@ package com.demo.spring.boot.soap.mtomresponse.endpoints;
 
 import com.demo.spring.boot.soap.mtomresponse.models.user.GetUserRequest;
 import com.demo.spring.boot.soap.mtomresponse.models.user.GetUserResponse;
+import com.demo.spring.boot.soap.mtomresponse.models.user.UploadUserRequest;
+import com.demo.spring.boot.soap.mtomresponse.models.user.UploadUserResponse;
 import com.demo.spring.boot.soap.mtomresponse.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +30,11 @@ public class UserEndpoint {
         response.setUser(userRepository.getUserById(request.getId()));
 
         return response;
+    }
+    
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "uploadUserRequest")
+    @ResponsePayload
+    public UploadUserResponse uploadUser (@RequestPayload UploadUserRequest user) {
+      return this.userRepository.uploadUserRepo(user);
     }
 }

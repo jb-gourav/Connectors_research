@@ -36,7 +36,7 @@ public class WebServiceConfig extends WsConfigurationSupport {
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
         marshaller.setContextPath("com.demo.spring.boot.soap.mtomresponse.models.user");
-        marshaller.setMtomEnabled(true); // IMPORTANT
+        marshaller.setMtomEnabled(true);// IMPORTANT
         return marshaller;
     }
 
