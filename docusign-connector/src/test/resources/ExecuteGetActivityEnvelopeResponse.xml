@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><envelopeGetResponse xmlns="http://org.jitterbit.connector/docusign/envelopeGetResponse"><envelopeGetResponseList><envelopes><envelope><envelopeId>123</envelopeId></envelope></envelopes><nextUri>123456</nextUri></envelopeGetResponseList></envelopeGetResponse>

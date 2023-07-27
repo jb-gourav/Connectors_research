@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enveloperecipientGetRequest xmlns="http://org.jitterbit.connector/docusign/enveloperecipientGetRequest">
+  <ENTITY>
+    <envelope_id>string</envelope_id>
+  </ENTITY>
+</enveloperecipientGetRequest>

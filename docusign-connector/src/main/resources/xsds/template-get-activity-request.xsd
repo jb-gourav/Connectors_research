@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://org.jitterbit.connector/docusign/templateGetRequest">
+  <xs:element name="templateGetRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="QueryParameters" minOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="count" minOccurs="0"/>
+              <xs:element type="xs:string" name="from_date" minOccurs="0"/>
+              <xs:element type="xs:string" name="modified_from_date" minOccurs="0"/>
+              <xs:element type="xs:string" name="modified_to_date" minOccurs="0"/>
+              <xs:element type="xs:string" name="order" minOccurs="0"/>
+              <xs:element type="xs:string" name="order_by" minOccurs="0"/>
+              <xs:element type="xs:string" name="search_text" minOccurs="0"/>
+              <xs:element type="xs:string" name="shared_by_me" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

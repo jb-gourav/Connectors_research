@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateGetRequest xmlns="http://org.jitterbit.connector/docusign/templateGetRequest">
+    <QueryParameters>
+        <from_date>2019/06/06</from_date>
+    </QueryParameters>
+</templateGetRequest>

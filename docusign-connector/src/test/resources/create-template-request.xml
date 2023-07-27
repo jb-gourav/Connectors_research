@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateCreateRequest xmlns="http://org.jitterbit.connector/docusign/templateCreateRequest">
+    <ENTITY>
+        <emailSubject>Sample Email Subject</emailSubject>
+        <documents>
+            <document>
+                <documentBase64>Sample Base64</documentBase64>
+                <documentId>1</documentId>
+                <fileExtension>pdf</fileExtension>
+                <name>Document Name</name>
+                <order>1</order>
+                <pages>1</pages>
+                <password>abc</password>
+                <remoteUrl>sampleUrl.com</remoteUrl>
+            </document>
+        </documents>
+        <recipients>
+            <carbonCopies>
+                <carbonCopy>
+                    <email>saurabh.bhandari@jitterbit.com</email>
+                    <name>Saurabh</name>
+                    <recipientId>1</recipientId>
+                    <routingOrder/>
+                </carbonCopy>
+            </carbonCopies>
+            <signers>
+                <signer>
+                    <email>Himanshu</email>
+                    <name>himanshu.sharma@jitterbit.com</name>
+                    <recipientId>2</recipientId>
+                    <routingOrder>2</routingOrder>
+                    <tabs>
+                        <signHereTabs>
+                            <signHereTab>
+                              <anchorString>1</anchorString>
+                            </signHereTab>
+                        </signHereTabs>
+                    </tabs>
+                </signer>
+            </signers>
+        </recipients>
+    </ENTITY>
+</templateCreateRequest>

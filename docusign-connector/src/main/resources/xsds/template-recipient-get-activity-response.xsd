@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://org.jitterbit.connector/docusign/templaterecipientGetResponse">
+  <xs:element name="templaterecipientGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="templateRecipientResponseList" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="errorDetails" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="errorCode" />
+                    <xs:element type="xs:string" name="errorMessage" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="templateId" />
+              <xs:element name="recipients">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="carbonCopies">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="carbonCopy" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="recipientId" />
+                                <xs:element type="xs:string" name="recipientIdGuid" />
+                                <xs:element type="xs:string" name="requireIdLookup" />
+                                <xs:element type="xs:string" name="routingOrder" />
+                                <xs:element type="xs:string" name="status" />
+                                <xs:element type="xs:string" name="userId" />
+                                <xs:element type="xs:string" name="email" />
+                                <xs:element type="xs:string" name="name" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="currentRoutingOrder" />
+                    <xs:element type="xs:string" name="recipientCount" />
+                    <xs:element name="signers">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="signer" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="deliveredDateTime" />
+                                <xs:element type="xs:string" name="recipientId" />
+                                <xs:element type="xs:string" name="recipientIdGuid" />
+                                <xs:element type="xs:string" name="requireIdLookup" />
+                                <xs:element type="xs:string" name="routingOrder" />
+                                <xs:element type="xs:string" name="signedDateTime" />
+                                <xs:element type="xs:string" name="status" />
+                                <xs:element type="xs:string" name="userId" />
+                                <xs:element type="xs:string" name="email" />
+                                <xs:element type="xs:string" name="name" />
+                                <xs:element type="xs:string" name="creationReason" />
+                                <xs:element type="xs:string" name="identityVerification" />
+                                <xs:element type="xs:string" name="isBulkRecipient" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

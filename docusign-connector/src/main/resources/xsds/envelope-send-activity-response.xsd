@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://org.jitterbit.connector/docusign/envelopeSendResponse">
+  <xs:element name="envelopeSendResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="envelopeSendResponseList" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="errorDetails">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="errorCode" />
+                    <xs:element type="xs:string" name="errorMessage" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="envelopeId" />
+              <xs:element type="xs:string" name="uri" />
+              <xs:element type="xs:string" name="statusDateTime" />
+              <xs:element type="xs:string" name="status" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

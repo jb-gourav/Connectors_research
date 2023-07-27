@@ -1,0 +1,53 @@
+{
+	"getObjects": [
+		{
+			"name": "Envelope",
+			"displayName": "Envelope",
+			"description": "The Envelope resource provides methods that allow you to manipulate and monitor envelopes."
+		},
+		{
+			"name": "Envelope Document",
+			"displayName": "Envelope Document",
+			"description": "The Envelope Document provides methods that manage documents in a envelope."
+		},
+		{
+			"name": "Envelope Recipient",
+			"displayName": "Envelope Recipient",
+			"description": "The Envelope Recipient provides methods that manage recipients in a envelope."
+		},
+		{
+			"name": "Template",
+			"displayName": "Template",
+			"description": "The Template resource provides methods that allow you to manipulate and monitor templates."
+		},
+		{
+			"name": "Template Document",
+			"displayName": "Template Document",
+			"description": "The Template Documents resource provides methods that manage documents in a template."
+		},
+		{
+			"name": "Template Recipient",
+			"displayName": "Template Recipient",
+			"description": "The Template Recipients resource allows you manage the recipients of an template."
+		}
+	],
+	"sendObjects": [
+		{
+			"name": "Envelope",
+			"displayName": "Envelope",
+			"description": "The Envelope resource provides methods that allow you to manipulate and monitor envelopes."
+		}
+	],
+	"createObjects": [
+		{
+			"name": "Envelope",
+			"displayName": "Envelope",
+			"description": "The Envelope resource provides methods that allow you to manipulate and monitor envelopes."
+		},
+		{
+			"name": "Template",
+			"displayName": "Template",
+			"description": "The Template resource provides methods that allow you to manipulate and monitor templates."
+		}
+	]
+}

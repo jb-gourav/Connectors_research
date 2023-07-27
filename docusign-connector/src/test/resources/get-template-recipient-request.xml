@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templaterecipientGetRequest xmlns="http://org.jitterbit.connector/docusign/templaterecipientGetRequest">
+  <ENTITY>
+    <template_id>string</template_id>
+  </ENTITY>
+</templaterecipientGetRequest>

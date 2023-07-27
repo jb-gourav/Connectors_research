@@ -1,0 +1,227 @@
+{
+	"name": "DocuSign Old",
+	"version": "1.0.2",
+	"sandbox": true,
+	"defaultActivityIcon": "/assets/images/DocuSign_Activity.svg",
+	"endpoint": {
+		"displayName": "DocuSign Old Endpoint",
+		"icon": "/assets/images/DocuSign_Folder.svg",
+		"properties": [
+			{
+				"name": "apiUserId",
+				"displayName": " User GUI (API Username)",
+				"type": "string",
+				"validators": [
+					{
+						"name": "required"
+					}
+				]
+			},
+			{
+				"name": "integrationKey",
+				"displayName": "Integration Key (Client Id) ",
+				"type": "string",
+				"validators": [
+					{
+						"name": "required"
+					}
+				]
+			},
+			{
+				"name": "privateKey",
+				"displayName": "Private Key",
+				"type": "textarea",
+				"multiple": false,
+				"widgetHint": "textarea",
+				"validators": [
+					{
+						"name": "required"
+					}
+				]
+			},
+			{
+				"name": "oAuthBasePath",
+				"displayName": "OAUTH BASE URL PATH",
+				"enumValues": [
+					{
+						"enumValue": "Sandbox",
+						"realValue": "account-d.docusign.com"
+					},
+					{
+						"enumValue": "Production",
+						"realValue": "account.docusign.com"
+					}
+				]
+			},
+			{
+				"name": "tokenExpire",
+				"displayName": "Token Expire In Seconds",
+				"type": "number",
+				"defaultValue": "300",
+				"validators": [
+               {
+                 "name": "pattern",
+                 "args": [
+                   "^[1-9][0-9]{0,6}$"
+                 ],
+                 "errorMessage": "Invalid number format or max length exceed"
+               }
+             ]
+			},
+			{
+				"name": "redirectUri",
+				"displayName": "Redirect Uri",
+				"type": "string",
+				"validators": [
+					{
+						"name": "required"
+					}
+				]
+			},
+			{
+				"name": "version-options",
+				"displayName": "API Version",
+				"type": "advanced-builder",
+				"children": [
+					{
+						"name": "version",
+						"displayName": "API Version",
+						"type": "string",
+						"defaultValue": "V2",
+						"enumValues": [
+							{
+								"realValue": "V2",
+								"enumValue": "V2"
+							},
+							{
+								"realValue": "V2.1",
+								"enumValue": "V2.1"
+							}
+						],
+						"validators": [
+							{
+								"name": "required"
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"activities": {
+		"create": {
+			"displayName": "Create",
+			"properties": [
+				{
+					"name": "list-object-page",
+					"type": "pagination",
+					"children": [
+						{
+							"name": "list-object",
+							"displayName": "Select an Object",
+							"type": "list-object",
+							"use": {
+								"ui": {
+									"pageDescription": "Please select an object.",
+									"selectObjectLabel": "Selected Object: ",
+									"tableHeaders": [
+										"Name",
+										"Description"
+									],
+									"tableItems": [
+										"name",
+										"desc"
+									]
+								},
+								"discoveryType": "provided",
+								"orientation": "output",
+								"documentIdPath": "this"
+							},
+							"validators": [
+								{
+									"name": "required"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"send": {
+			"displayName": "Send",
+			"properties": [
+				{
+					"name": "list-object-page",
+					"type": "pagination",
+					"children": [
+						{
+							"name": "list-object",
+							"displayName": "Select an Object",
+							"type": "list-object",
+							"use": {
+								"ui": {
+									"pageDescription": "Please select an object.",
+									"selectObjectLabel": "Selected Object: ",
+									"tableHeaders": [
+										"Name",
+										"Description"
+									],
+									"tableItems": [
+										"name",
+										"desc"
+									]
+								},
+								"discoveryType": "provided",
+								"orientation": "output",
+								"documentIdPath": "this"
+							},
+							"validators": [
+								{
+									"name": "required"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"get": {
+			"displayName": "Get",
+			"properties": [
+				{
+					"name": "list-object-page",
+					"type": "pagination",
+					"children": [
+						{
+							"name": "list-object",
+							"displayName": "Select an Object",
+							"type": "list-object",
+							"use": {
+								"ui": {
+									"pageDescription": "Please select an object.",
+									"selectObjectLabel": "Selected Object: ",
+									"tableHeaders": [
+										"Name",
+										"Description"
+									],
+									"tableItems": [
+										"name",
+										"desc"
+									]
+								},
+								"discoveryType": "provided",
+								"orientation": "output",
+								"documentIdPath": "this"
+							},
+							"validators": [
+								{
+									"name": "required"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://org.jitterbit.connector/docusign/templatedocumentGetResponse">
+  <xs:element name="templatedocumentGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="templateDocumentResponseList" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="errorDetails" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="errorCode" />
+                    <xs:element type="xs:string" name="errorMessage" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="templateDocuments">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="envelopeDocument" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="authoritativeCopy" />
+                          <xs:element name="availableDocumentTypes" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="signatureType">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="isDefault" />
+                                      <xs:element type="xs:string" name="type" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="display" />
+                          <xs:element type="xs:int" name="documentId" />
+                          <xs:element type="xs:string" name="includeInDownload" />
+                          <xs:element type="xs:string" name="name" />
+                          <xs:element type="xs:int" name="order" />
+                          <xs:element type="xs:int" name="pages" />
+                          <xs:element type="xs:string" name="signerMustAcknowledge" />
+                          <xs:element type="xs:string" name="type" />
+                          <xs:element type="xs:string" name="uri" />
+                          <xs:element type="xs:base64Binary" name="documentContent" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="templateId" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
