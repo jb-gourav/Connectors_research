@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<envelopeGetRequest xmlns="http://org.jitterbit.connector/docusign/envelopeGetRequest">
-    <QueryParameters>
-        <from_date>2019/06/06</from_date>
-        <status>sent</status>
-    </QueryParameters>
-</envelopeGetRequest>
